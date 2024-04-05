@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+
+class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int[] vetor = new int[30];
+    int i, valor, posicao = -1;
+    boolean encontrado = false;
+
+    // Preenche o vetor com números aleatórios entre 1 e 100
+    for (i = 0; i < vetor.length; i++) {
+      vetor[i] = (int) (Math.random() * 100) + 1;
+    }
+
+    // Pede ao usuário para digitar um valor
+    System.out.print("Digite um valor: ");
+    valor = sc.nextInt();
+
+    // Procura o valor no vetor
+    for (i = 0; i < vetor.length; i++) {
+      if (vetor[i] == valor) {
+        encontrado = true;
+        posicao = i;
+        break;
+      }
+    }
+
+    // Remova o valor do vetor se ele foi encontrado
+   
+    System.out.println("Valor encontrado na posição " + posicao);
+    for (i = posicao; i < vetor.length - 1; i++);
+    System.out.println("Vetor depois da remoção:");
+    for (i = 0; i < vetor.length - 1; i++);
+    System.out.print(vetor[i] + " ");
+    System.out.println();
+    sc.close();
+    
+  }
+}
