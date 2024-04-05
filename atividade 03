@@ -1,0 +1,18 @@
+import java.util.Random;
+public class Main {
+  public static void main(String[] args) {
+    int[] vetor = new int[10];
+    Random random = new Random();
+    for (int i = 0; i < vetor.length; i++) {
+      vetor[i] = random.nextInt(100);
+    }
+    int soma = 0;
+    for (int i = 0; i < vetor.length; i++) {
+      soma += vetor[i];
+    }
+    double media = (double) soma / vetor.length;
+    System.out.println("A média dos elementos do vetor é: " + media);
+
+  
+  }
+}
