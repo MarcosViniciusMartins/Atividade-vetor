@@ -1,0 +1,21 @@
+//Um sistema de gerenciamento de projetos precisa gerar estimativas de prazos com base em sequências de tarefas. Faça um programa que solicite ao usuário inserir um número inteiro positivo N e, em seguida, gere e imprima os N primeiros termos da sequência de Fibonacci, que representa os prazos estimados.
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Digite um número inteiro positivo: ");
+    int n = sc.nextInt();
+    int a = 0;
+    int b = 1;
+    int c = 0;
+    System.out.print("Os " + n + " primeiros termos da sequência de Fibonacci são: ");
+    for (int i = 1; i <= n; i++) {
+      System.out.print(a + " ");
+      c = a + b;
+      a = b;
+      b = c;
+    }
+  }
+
+
+}
