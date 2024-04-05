@@ -1,0 +1,28 @@
+import java.util.Random;
+public class Main {
+  public static void main(String[] args) {
+    int[] vetor = new int[15];
+    Random random = new Random();
+    for (int i = 0; i < vetor.length; i++) {
+      vetor[i] = random.nextInt(50) + 1;
+    }
+    for (int i = 0; i < vetor.length; i++) {
+      System.out.print(vetor[i] + " ");
+    }
+    System.out.println();
+    int indice = -1;
+    for (int i = 0; i < vetor.length; i++) {
+      if (vetor[i] == 20) {
+        indice = i;
+        break;
+      }
+    }
+    if (indice != -1) {
+      
+      System.out.println("O número 20 está no índice " + indice);
+    } else {
+      System.out.println("O número 20 não foi encontrado no vetor.");
+    }
+  }
+
+}
