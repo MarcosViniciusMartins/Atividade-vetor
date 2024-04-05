@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int[] vetor = new int[10];
+    int i, j, cont = 0;
+    boolean primo = true;
+    for (i = 0; i < vetor.length; i++) {
+      System.out.print("Digite um número: ");
+      vetor[i] = input.nextInt();
+    }
+    for (i = 0; i < vetor.length; i++) {
+      primo = true;
+      for (j = 2; j < vetor[i]; j++) {
+        if (vetor[i] % j == 0) {
+          primo = false;
+          break;
+        }
+      }
+      if (primo) {
+        cont++;
+        System.out.println("O número " + vetor[i] + " é primo e está na posição " + i);
+      }
+    }
+    System.out.println("Foram encontrados " + cont + " números primos.");
+  }
+
+
+}
